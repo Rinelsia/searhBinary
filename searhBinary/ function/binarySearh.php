@@ -37,7 +37,7 @@ function searchKeyVal($filename, $val_key){
 	while ($leng >= 1) {
 		$leng = intdiv(count($file_parse), 2);
 		$arr_file = explode('\t', $file_parse[$leng]);
-		
+	//  Проверка на соответствие ключа и перезапись массива	
 		if ($arr_file[0]==$val_key) {
 			$str = "'['$arr_file[0]']' => $arr_file[1]";
 			break;
